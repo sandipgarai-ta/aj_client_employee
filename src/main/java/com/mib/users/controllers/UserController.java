@@ -19,8 +19,7 @@ public class UserController {
 	UserService us;
 	
 	@PostMapping
-	public @ResponseBody int registerUser(@RequestBody User user) {
-		us.saveUser(user);
-		return 1;
+	public @ResponseBody User registerUser(@RequestBody User user) {
+		return us.saveUser(user);
 	}
 }
